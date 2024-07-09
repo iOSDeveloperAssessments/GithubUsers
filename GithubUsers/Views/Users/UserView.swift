@@ -30,7 +30,34 @@ struct UserView: View {
         Text("Error: \(errorMessage)")
           .foregroundColor(.red)
       case .user(let user):
-        Text(user.name ?? "")
+        List {
+          Section {
+            HStack {
+              AsyncImage(url: user.avatarURL) { phase in
+                switch phase {
+                case .empty: ProgressView()
+                case .success(let image):
+                  image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                case .failure(_):
+                  Image(systemName: "person.crop.circle.badge.exclamationmark")
+                @unknown default:
+                  Image(systemName: "person.crop.circle.badge.exclamationmark")
+                }
+              }
+              .frame(width: 100, height: 100)
+              .clipShape(.rect(cornerRadii: .init(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
+              Spacer()
+              VStack(alignment: .trailing) {
+                Text(user.name ?? "")
+                  .font(.title3)
+                Text(user.username)
+                  .font(.headline)
+              }
+            }
+          }
+        }
       }
     }
     .task {
