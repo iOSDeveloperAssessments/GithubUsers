@@ -24,13 +24,20 @@ struct UserListView: View {
     VStack {
       switch viewState {
       case .loading:
-        Text("Loading characters ...")
+        Text("Loading users ...")
         ProgressView()
       case .error(let errorMessage):
         Text("Error: \(errorMessage)")
           .foregroundColor(.red)
       case .users:
-        Text("Users ...")
+        VStack {
+          List {
+            ForEach(users) { user in
+              UserRowView(user: user)
+            }
+          }
+          .navigationTitle("Github Users")
+        }
       }
     }
     .task {
