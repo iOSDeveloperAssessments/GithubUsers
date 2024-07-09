@@ -26,6 +26,7 @@
 		4E58EF5F2C3D5F39008AB47D /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF5E2C3D5F39008AB47D /* UserListView.swift */; };
 		4E58EF612C3D697A008AB47D /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF602C3D697A008AB47D /* UserRowView.swift */; };
 		4E58EF632C3D9559008AB47D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF622C3D9559008AB47D /* UserView.swift */; };
+		4E58EF652C3DA280008AB47D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF642C3DA280008AB47D /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		4E58EF5E2C3D5F39008AB47D /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		4E58EF602C3D697A008AB47D /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		4E58EF622C3D9559008AB47D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		4E58EF642C3DA280008AB47D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				4E58EF512C3D2DA1008AB47D /* GithubUser.swift */,
+				4E58EF642C3DA280008AB47D /* Repository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			files = (
 				4E58EF612C3D697A008AB47D /* UserRowView.swift in Sources */,
 				4E58EF4F2C3D2D50008AB47D /* GithubNetworkClient.swift in Sources */,
+				4E58EF652C3DA280008AB47D /* Repository.swift in Sources */,
 				4E58EF482C3D1BEF008AB47D /* NetworkService.swift in Sources */,
 				4E58EF182C3D137A008AB47D /* ContentView.swift in Sources */,
 				4E58EF4B2C3D1E25008AB47D /* GithubEnpoint.swift in Sources */,
