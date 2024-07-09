@@ -21,6 +21,6 @@ class GithubUserAdapter: Adapter {
   }
 
   func adapt() -> GithubUser {
-    .init(username: adaptee.login, avatarURL: URL(string: adaptee.avatarUrl))
+    .init(username: adaptee.login, avatarURL: URL(string: adaptee.avatar_url))
   }
 }

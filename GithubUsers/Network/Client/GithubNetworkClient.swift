@@ -22,8 +22,8 @@ class GithubNetworkClient {
 
 extension GithubNetworkClient: GithubAPI {
   func users(at page: Int = .zero) async throws -> [GithubUser] {
-    let response: GithubUsersResponse = try await networkService.request(from: UsersEndpoint(page: page))
+    let response: [GithubUserResponse] = try await networkService.request(from: UsersEndpoint(page: page))
 
-    return response.users.compactMap { GithubUserAdapter(response: $0).adapt() }
+    return response.compactMap { GithubUserAdapter(response: $0).adapt() }
   }
 }

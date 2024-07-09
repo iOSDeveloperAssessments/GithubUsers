@@ -22,7 +22,6 @@
 		4E58EF4F2C3D2D50008AB47D /* GithubNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF4E2C3D2D50008AB47D /* GithubNetworkClient.swift */; };
 		4E58EF522C3D2DA1008AB47D /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF512C3D2DA1008AB47D /* GithubUser.swift */; };
 		4E58EF552C3D315E008AB47D /* GithubUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF542C3D315E008AB47D /* GithubUserResponse.swift */; };
-		4E58EF572C3D589B008AB47D /* GithubUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF562C3D589B008AB47D /* GithubUsersResponse.swift */; };
 		4E58EF5B2C3D5A39008AB47D /* GithubUserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF5A2C3D5A39008AB47D /* GithubUserAdapter.swift */; };
 		4E58EF5F2C3D5F39008AB47D /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF5E2C3D5F39008AB47D /* UserListView.swift */; };
 		4E58EF612C3D697A008AB47D /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF602C3D697A008AB47D /* UserRowView.swift */; };
@@ -64,7 +63,6 @@
 		4E58EF4E2C3D2D50008AB47D /* GithubNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkClient.swift; sourceTree = "<group>"; };
 		4E58EF512C3D2DA1008AB47D /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		4E58EF542C3D315E008AB47D /* GithubUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserResponse.swift; sourceTree = "<group>"; };
-		4E58EF562C3D589B008AB47D /* GithubUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersResponse.swift; sourceTree = "<group>"; };
 		4E58EF5A2C3D5A39008AB47D /* GithubUserAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserAdapter.swift; sourceTree = "<group>"; };
 		4E58EF5E2C3D5F39008AB47D /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		4E58EF602C3D697A008AB47D /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				4E58EF542C3D315E008AB47D /* GithubUserResponse.swift */,
-				4E58EF562C3D589B008AB47D /* GithubUsersResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,7 +365,6 @@
 				4E58EF612C3D697A008AB47D /* UserRowView.swift in Sources */,
 				4E58EF4F2C3D2D50008AB47D /* GithubNetworkClient.swift in Sources */,
 				4E58EF482C3D1BEF008AB47D /* NetworkService.swift in Sources */,
-				4E58EF572C3D589B008AB47D /* GithubUsersResponse.swift in Sources */,
 				4E58EF182C3D137A008AB47D /* ContentView.swift in Sources */,
 				4E58EF4B2C3D1E25008AB47D /* GithubEnpoint.swift in Sources */,
 				4E58EF5B2C3D5A39008AB47D /* GithubUserAdapter.swift in Sources */,

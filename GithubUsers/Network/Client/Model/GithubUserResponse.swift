@@ -9,5 +9,5 @@ import Foundation
 
 struct GithubUserResponse: Decodable {
   var login: String
-  var avatarUrl: String
+  var avatar_url: String
 }
