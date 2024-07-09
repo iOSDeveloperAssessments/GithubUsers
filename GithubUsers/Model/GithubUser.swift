@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct GithubUser {
+struct GithubUser: Identifiable {
+  var id: Int
   var username: String
   var avatarURL: URL?
 }
