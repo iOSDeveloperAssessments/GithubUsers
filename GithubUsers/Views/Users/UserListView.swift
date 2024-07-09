@@ -42,6 +42,10 @@ struct UserListView: View {
           List {
             ForEach(filteredUsers) { user in
               UserRowView(user: user)
+                .background {
+                  NavigationLink(value: user.username) {}
+                    .opacity(.zero)
+                }
                 .onAppear {
                   if let lastId = users.last?.id,
                      user.id ==  lastId {
@@ -51,6 +55,9 @@ struct UserListView: View {
             }
           }
           .navigationTitle("Github Users")
+          .navigationDestination(for: String.self) { username in
+            UserView(username: username)
+          }
           .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Username")
         }
         Text("Loaded Pages: \(currentPage)")
