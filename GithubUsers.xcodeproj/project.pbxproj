@@ -17,6 +17,7 @@
 		4E58EF352C3D137B008AB47D /* GithubUsersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF342C3D137B008AB47D /* GithubUsersUITestsLaunchTests.swift */; };
 		4E58EF452C3D1B0D008AB47D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF442C3D1B0D008AB47D /* Endpoint.swift */; };
 		4E58EF482C3D1BEF008AB47D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF472C3D1BEF008AB47D /* NetworkService.swift */; };
+		4E58EF4B2C3D1E25008AB47D /* GithubEnpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF4A2C3D1E25008AB47D /* GithubEnpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		4E58EF342C3D137B008AB47D /* GithubUsersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4E58EF442C3D1B0D008AB47D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		4E58EF472C3D1BEF008AB47D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4E58EF4A2C3D1E25008AB47D /* GithubEnpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEnpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +158,17 @@
 		4E58EF432C3D1AB8008AB47D /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				4E58EF492C3D1D7B008AB47D /* Endpoints */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		4E58EF492C3D1D7B008AB47D /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF4A2C3D1E25008AB47D /* GithubEnpoint.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 			files = (
 				4E58EF482C3D1BEF008AB47D /* NetworkService.swift in Sources */,
 				4E58EF182C3D137A008AB47D /* ContentView.swift in Sources */,
+				4E58EF4B2C3D1E25008AB47D /* GithubEnpoint.swift in Sources */,
 				4E58EF1A2C3D137A008AB47D /* Item.swift in Sources */,
 				4E58EF452C3D1B0D008AB47D /* Endpoint.swift in Sources */,
 				4E58EF162C3D137A008AB47D /* GithubUsersApp.swift in Sources */,
