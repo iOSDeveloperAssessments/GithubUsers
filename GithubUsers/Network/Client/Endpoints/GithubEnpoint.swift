@@ -7,20 +7,19 @@
 
 import Foundation
 
-protocol GithubEnpoint: Endpoint, URLRequestable {
+protocol Paginable {
   var perPage: Int? { get set }
   var page: Int? { get set }
 }
 
+protocol GithubEnpoint: Endpoint, URLRequestable {
+}
+
 extension GithubEnpoint {
   var scheme: String { "https" }
-  var host: String { "rickandmortyapi.com" }
-  var baseURLString: String { "/api" }
-  var queryParameters: [String : String]? {
-    guard let perPage = perPage, let page = page else { return .none }
-
-    return ["per_page": String(perPage), "page": String(page)]
-  }
+  var host: String { "api.github.com" }
+  var baseURLString: String { "" }
+  var queryParameters: [String : String]? { .none }
   var method: Method { .get }
   var path: String { "" }
   var perPage: Int { 20 }
