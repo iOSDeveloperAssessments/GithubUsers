@@ -8,7 +8,7 @@
 import SwiftUI
 
 protocol GithubAPI {
-  func users(at page: Int) async throws -> [GithubUser]
+  func users(at since: Int) async throws -> [GithubUser]
 }
 
 @Observable
@@ -21,8 +21,10 @@ class GithubNetworkClient {
 }
 
 extension GithubNetworkClient: GithubAPI {
-  func users(at page: Int = .zero) async throws -> [GithubUser] {
-    let response: [GithubUserResponse] = try await networkService.request(from: UsersEndpoint(page: page))
+  func users(at since: Int = .zero) async throws -> [GithubUser] {
+    print("Loading next users at \(since)")
+
+    let response: [GithubUserResponse] = try await networkService.request(from: UsersEndpoint(since: since))
 
     return response.compactMap { GithubUserAdapter(response: $0).adapt() }
   }

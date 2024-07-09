@@ -9,7 +9,7 @@ import Foundation
 
 protocol Paginable {
   var perPage: Int? { get set }
-  var page: Int? { get set }
+  var since: Int? { get set }
 }
 
 protocol GithubEnpoint: Endpoint, URLRequestable {

@@ -13,6 +13,7 @@ struct UserListView: View {
   @State private var users: [GithubUser] = []
   @State private var viewState: ViewState = .loading
   @State private var currentPage = Int.zero
+  @State private var since = Int.zero
 
   enum ViewState {
     case loading
@@ -34,10 +35,18 @@ struct UserListView: View {
           List {
             ForEach(users) { user in
               UserRowView(user: user)
+                .onAppear {
+                  if let lastId = users.last?.id,
+                     user.id ==  lastId {
+                    Task { await fetchNextUsers() }
+                  }
+                }
             }
           }
           .navigationTitle("Github Users")
         }
+        Text("Loaded Pages: \(currentPage)")
+          .font(.subheadline)
       }
     }
     .task {
@@ -49,9 +58,10 @@ struct UserListView: View {
 extension UserListView {
   private func fetchNextUsers() async {
     do {
-      let nextUsers = try await api.users(at: currentPage)
+      let nextUsers = try await api.users(at: since)
       users.append(contentsOf: nextUsers)
       currentPage += 1
+      since = nextUsers.last?.id ?? .zero
       viewState = .users
     } catch {
       viewState = .error(error.localizedDescription)

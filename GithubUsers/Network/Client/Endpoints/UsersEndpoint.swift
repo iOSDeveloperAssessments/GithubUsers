@@ -8,13 +8,13 @@
 import Foundation
 
 struct UsersEndpoint: GithubEnpoint, Paginable {
-  var page: Int?
+  var since: Int?
   var perPage: Int? = 20
 
   var path: String { "/users" }
   var queryParameters: [String : String]? {
-    guard let perPage = perPage, let page = page else { return .none }
+    guard let perPage = perPage, let since = since else { return .none }
 
-    return ["per_page": String(perPage), "since": String(page * perPage)]
+    return ["per_page": String(perPage), "since": String(since)]
   }
 }

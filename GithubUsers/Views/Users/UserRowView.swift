@@ -27,8 +27,11 @@ struct UserRowView: View {
       }
       .frame(width: 50, height: 50)
       .clipShape(.rect(cornerRadii: .init(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
+      Text(String(user.id))
+        .font(.subheadline)
       Text(user.username)
-          .font(.title)
+          .font(.title2)
+          .lineLimit(1)
       Spacer()
     }
   }
