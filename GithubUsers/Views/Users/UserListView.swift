@@ -14,6 +14,13 @@ struct UserListView: View {
   @State private var viewState: ViewState = .loading
   @State private var currentPage = Int.zero
   @State private var since = Int.zero
+  @State private var searchText = ""
+
+  private var filteredUsers: [GithubUser] {
+    searchText.isEmpty ? users : users.filter {
+      $0.username.lowercased().contains(searchText.lowercased())
+    }
+  }
 
   enum ViewState {
     case loading
@@ -33,7 +40,7 @@ struct UserListView: View {
       case .users:
         VStack {
           List {
-            ForEach(users) { user in
+            ForEach(filteredUsers) { user in
               UserRowView(user: user)
                 .onAppear {
                   if let lastId = users.last?.id,
@@ -44,6 +51,7 @@ struct UserListView: View {
             }
           }
           .navigationTitle("Github Users")
+          .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Username")
         }
         Text("Loaded Pages: \(currentPage)")
           .font(.subheadline)
