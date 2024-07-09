@@ -11,7 +11,7 @@ struct UserRowView: View {
   var user: GithubUser
 
   var body: some View {
-    HStack(spacing: 10) {
+    HStack(spacing: 20) {
       AsyncImage(url: user.avatarURL) { phase in
         switch phase {
         case .empty: ProgressView()
@@ -35,5 +35,5 @@ struct UserRowView: View {
 }
 
 #Preview {
-  UserRowView(user: .init(username: "Preview"))
+  UserRowView(user: .init(id: .zero, username: "Preview"))
 }
