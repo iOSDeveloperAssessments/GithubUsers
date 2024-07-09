@@ -27,6 +27,7 @@
 		4E58EF612C3D697A008AB47D /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF602C3D697A008AB47D /* UserRowView.swift */; };
 		4E58EF632C3D9559008AB47D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF622C3D9559008AB47D /* UserView.swift */; };
 		4E58EF652C3DA280008AB47D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF642C3DA280008AB47D /* Repository.swift */; };
+		4E58EF672C3DA488008AB47D /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF662C3DA488008AB47D /* UserEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		4E58EF602C3D697A008AB47D /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		4E58EF622C3D9559008AB47D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		4E58EF642C3DA280008AB47D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4E58EF662C3DA488008AB47D /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			children = (
 				4E58EF4A2C3D1E25008AB47D /* GithubEnpoint.swift */,
 				4E58EF4C2C3D243E008AB47D /* UsersEndpoint.swift */,
+				4E58EF662C3DA488008AB47D /* UserEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				4E58EF452C3D1B0D008AB47D /* Endpoint.swift in Sources */,
 				4E58EF162C3D137A008AB47D /* GithubUsersApp.swift in Sources */,
 				4E58EF4D2C3D243E008AB47D /* UsersEndpoint.swift in Sources */,
+				4E58EF672C3DA488008AB47D /* UserEndpoint.swift in Sources */,
 				4E58EF5F2C3D5F39008AB47D /* UserListView.swift in Sources */,
 				4E58EF632C3D9559008AB47D /* UserView.swift in Sources */,
 			);

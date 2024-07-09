@@ -11,4 +11,8 @@ struct GithubUser: Identifiable {
   var id: Int
   var username: String
   var avatarURL: URL?
+
+  var name: String?
+  var followers: [GithubUser]?
+  var repositories: [Repository]?
 }

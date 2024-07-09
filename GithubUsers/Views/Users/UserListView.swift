@@ -43,7 +43,7 @@ struct UserListView: View {
             ForEach(filteredUsers) { user in
               UserRowView(user: user)
                 .background {
-                  NavigationLink(value: user.username) {}
+                  NavigationLink(value: user.id) {}
                     .opacity(.zero)
                 }
                 .onAppear {
@@ -55,8 +55,9 @@ struct UserListView: View {
             }
           }
           .navigationTitle("Github Users")
-          .navigationDestination(for: String.self) { username in
-            UserView(username: username)
+          .navigationDestination(for: Int.self) { id in
+            UserView(id: id)
+              .environment(api)
           }
           .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Username")
         }

@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol GithubAPI {
   func users(at since: Int) async throws -> [GithubUser]
+  func user(id: Int) async throws -> GithubUser
 }
 
 @Observable
@@ -27,5 +28,11 @@ extension GithubNetworkClient: GithubAPI {
     let response: [GithubUserResponse] = try await networkService.request(from: UsersEndpoint(since: since))
 
     return response.compactMap { GithubUserAdapter(response: $0).adapt() }
+  }
+
+  func user(id: Int) async throws -> GithubUser {
+    let response: GithubUserResponse = try await networkService.request(from: UserEndpoint(id: id))
+
+    return GithubUserAdapter(response: response).adapt()
   }
 }
