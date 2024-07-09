@@ -17,7 +17,7 @@ struct UserListView: View {
   enum ViewState {
     case loading
     case error(_ errorMessage: String)
-    case users(_ data: [GithubUser])
+    case users
   }
 
   var body: some View {
@@ -29,9 +29,25 @@ struct UserListView: View {
       case .error(let errorMessage):
         Text("Error: \(errorMessage)")
           .foregroundColor(.red)
-      case .users(let users):
+      case .users:
         Text("Users ...")
       }
+    }
+    .task {
+      if users.isEmpty { await fetchNextUsers() }
+    }
+  }
+}
+
+extension UserListView {
+  private func fetchNextUsers() async {
+    do {
+      let nextUsers = try await api.users(at: currentPage)
+      users.append(contentsOf: nextUsers)
+      currentPage += 1
+      viewState = .users
+    } catch {
+      viewState = .error(error.localizedDescription)
     }
   }
 }
