@@ -13,7 +13,7 @@ final class GithubNetworkClientTests: XCTestCase {
   func testGithubNetworkClientUsers() async throws {
     /// Given
     let networkService = MockNetworkService()
-    let response = try DummyUsersLoader.loadUsers()
+    let response = try DummyLoader<[GithubUserResponse]>.load(name: "GithubUsers")
     networkService.requestResult = response
     let expectedResult = response.compactMap { GithubUserAdapter(response: $0).adapt() }
     let sut = GithubNetworkClient(networkService: networkService)
@@ -28,9 +28,9 @@ final class GithubNetworkClientTests: XCTestCase {
   func testGithubNetworkClientUser() async throws {
     /// Given
     let networkService = MockNetworkService()
-    let response = try DummyUserLoader.loadUser()
-    let repositoriesResponse = try DummyRepositoriesLoader.loadRepositories()
-    let followersResponse = try DummyUsersLoader.loadUsers()
+    let response = try DummyLoader<GithubUserResponse>.load(name: "GithubUser")
+    let repositoriesResponse = try DummyLoader<[RepositoryResponse]>.load(name: "Repositories")
+    let followersResponse = try DummyLoader<[GithubUserResponse]>.load(name: "GithubUsers")
     networkService.requestResult = response
     networkService.reposRequestResult = repositoriesResponse
     networkService.followersRequestResult = followersResponse
