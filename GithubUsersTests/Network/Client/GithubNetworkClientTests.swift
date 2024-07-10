@@ -6,30 +6,57 @@
 //
 
 import XCTest
+@testable import GithubUsers
 
 final class GithubNetworkClientTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+  func testGithubNetworkClientUsers() async throws {
+    /// Given
+    let networkService = MockNetworkService()
+    let response = try DummyUsersLoader.loadUsers()
+    networkService.requestResult = response
+    let expectedResult = response.compactMap { GithubUserAdapter(response: $0).adapt() }
+    let sut = GithubNetworkClient(networkService: networkService)
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    /// When
+    let result = try await sut.users()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    /// Then
+    XCTAssertEqual(result, expectedResult)
+  }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+  func testGithubNetworkClientUser() async throws {
+    /// Given
+    let networkService = MockNetworkService()
+    let response = try DummyUserLoader.loadUser()
+    let repositoriesResponse = try DummyRepositoriesLoader.loadRepositories()
+    let followersResponse = try DummyUsersLoader.loadUsers()
+    networkService.requestResult = response
+    networkService.reposRequestResult = repositoriesResponse
+    networkService.followersRequestResult = followersResponse
+    let sut = GithubNetworkClient(networkService: networkService)
 
+    /// When
+    let expectedResult = GithubUserAdapter(response: response).adapt()
+    let expectedRepositoriesResult = repositoriesResponse.compactMap { RepositoryAdapter(response: $0).adapt() }
+    let expectedFollowersResult = followersResponse.compactMap { GithubUserAdapter(response: $0).adapt() }
+    let result = try await sut.user(id: 1)
+
+    /// Then
+    XCTAssertEqual(result, expectedResult)
+    XCTAssertEqual(result.repositories, expectedRepositoriesResult)
+    XCTAssertEqual(result.followers, expectedFollowersResult)
+  }
+}
+
+extension GithubUser: Equatable {
+  public static func == (lhs: GithubUsers.GithubUser, rhs: GithubUsers.GithubUser) -> Bool {
+    lhs.id == rhs.id
+  }
+}
+
+extension Repository: Equatable {
+  public static func == (lhs: Repository, rhs: Repository) -> Bool {
+    lhs.id == rhs.id
+  }
 }
