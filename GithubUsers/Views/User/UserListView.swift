@@ -12,9 +12,8 @@ struct UserListView: View {
   @Environment(GithubNetworkClient.self) private var api
   @Environment(\.modelContext) private var modelContext
 
-  @Query private var users: [GithubUser] = []
+  @Query(sort: \GithubUser.id, order: .forward) private var users: [GithubUser] = []
   @State private var viewState: ViewState = .loading
-  @State private var currentPage = Int.zero
   @State private var since = Int.zero
   @State private var searchText = ""
 
@@ -63,8 +62,6 @@ struct UserListView: View {
           }
           .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Username")
         }
-        Text("Loaded Pages: \(currentPage)")
-          .font(.subheadline)
       }
     }
     .task {
@@ -85,7 +82,6 @@ extension UserListView {
         modelContext.insert(user)
       }
       try modelContext.save()
-      currentPage += 1
       since = nextUsers.last?.id ?? .zero
       viewState = .users
     } catch {

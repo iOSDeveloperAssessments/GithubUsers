@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class Repository: Identifiable {
-  var id: Int
+  @Attribute(.unique) var id: Int
   var name: String?
   var language: String?
   

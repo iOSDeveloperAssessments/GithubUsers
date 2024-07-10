@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class GithubUser: Identifiable {
-  var id: Int
+  @Attribute(.unique) var id: Int
   var username: String
   var avatarURL: URL?
 
