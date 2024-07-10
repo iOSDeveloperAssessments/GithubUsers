@@ -12,7 +12,6 @@
 		4E58EF1A2C3D137A008AB47D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF192C3D137A008AB47D /* Item.swift */; };
 		4E58EF1C2C3D137B008AB47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E58EF1B2C3D137B008AB47D /* Assets.xcassets */; };
 		4E58EF1F2C3D137B008AB47D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E58EF1E2C3D137B008AB47D /* Preview Assets.xcassets */; };
-		4E58EF292C3D137B008AB47D /* GithubUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF282C3D137B008AB47D /* GithubUsersTests.swift */; };
 		4E58EF332C3D137B008AB47D /* GithubUsersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF322C3D137B008AB47D /* GithubUsersUITests.swift */; };
 		4E58EF352C3D137B008AB47D /* GithubUsersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF342C3D137B008AB47D /* GithubUsersUITestsLaunchTests.swift */; };
 		4E58EF452C3D1B0D008AB47D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF442C3D1B0D008AB47D /* Endpoint.swift */; };
@@ -33,6 +32,14 @@
 		4E58EF6D2C3DD8C7008AB47D /* RepositoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF6C2C3DD8C7008AB47D /* RepositoryAdapter.swift */; };
 		4E58EF6F2C3E5FF3008AB47D /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF6E2C3E5FF3008AB47D /* URLEndpoint.swift */; };
 		4E58EF712C3E60D0008AB47D /* FollowersEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF702C3E60D0008AB47D /* FollowersEndpoint.swift */; };
+		4E58EF752C3E660F008AB47D /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF742C3E660F008AB47D /* NetworkServiceTests.swift */; };
+		4E58EF7A2C3E66E8008AB47D /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF782C3E66E7008AB47D /* MockNetworkService.swift */; };
+		4E58EF7B2C3E66E8008AB47D /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF792C3E66E8008AB47D /* MockURLProtocol.swift */; };
+		4E58EF7E2C3E6748008AB47D /* XCTAssertThrowsErrorAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF7C2C3E6748008AB47D /* XCTAssertThrowsErrorAsync.swift */; };
+		4E58EF842C3E676D008AB47D /* DummyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF7F2C3E676D008AB47D /* DummyEndpoint.swift */; };
+		4E58EF852C3E676D008AB47D /* DummyInvalidURLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF802C3E676D008AB47D /* DummyInvalidURLEndpoint.swift */; };
+		4E58EF862C3E676D008AB47D /* DummyTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF822C3E676D008AB47D /* DummyTestModel.swift */; };
+		4E58EF892C3E6B9C008AB47D /* GithubNetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF882C3E6B9C008AB47D /* GithubNetworkClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +67,6 @@
 		4E58EF1B2C3D137B008AB47D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E58EF1E2C3D137B008AB47D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E58EF242C3D137B008AB47D /* GithubUsersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUsersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E58EF282C3D137B008AB47D /* GithubUsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersTests.swift; sourceTree = "<group>"; };
 		4E58EF2E2C3D137B008AB47D /* GithubUsersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUsersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E58EF322C3D137B008AB47D /* GithubUsersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersUITests.swift; sourceTree = "<group>"; };
 		4E58EF342C3D137B008AB47D /* GithubUsersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -82,6 +88,14 @@
 		4E58EF6C2C3DD8C7008AB47D /* RepositoryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAdapter.swift; sourceTree = "<group>"; };
 		4E58EF6E2C3E5FF3008AB47D /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
 		4E58EF702C3E60D0008AB47D /* FollowersEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersEndpoint.swift; sourceTree = "<group>"; };
+		4E58EF742C3E660F008AB47D /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		4E58EF782C3E66E7008AB47D /* MockNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		4E58EF792C3E66E8008AB47D /* MockURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		4E58EF7C2C3E6748008AB47D /* XCTAssertThrowsErrorAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTAssertThrowsErrorAsync.swift; sourceTree = "<group>"; };
+		4E58EF7F2C3E676D008AB47D /* DummyEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyEndpoint.swift; sourceTree = "<group>"; };
+		4E58EF802C3E676D008AB47D /* DummyInvalidURLEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyInvalidURLEndpoint.swift; sourceTree = "<group>"; };
+		4E58EF822C3E676D008AB47D /* DummyTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTestModel.swift; sourceTree = "<group>"; };
+		4E58EF882C3E6B9C008AB47D /* GithubNetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +169,8 @@
 		4E58EF272C3D137B008AB47D /* GithubUsersTests */ = {
 			isa = PBXGroup;
 			children = (
-				4E58EF282C3D137B008AB47D /* GithubUsersTests.swift */,
+				4E58EF7D2C3E6748008AB47D /* Utils */,
+				4E58EF722C3E6566008AB47D /* Network */,
 			);
 			path = GithubUsersTests;
 			sourceTree = "<group>";
@@ -254,6 +269,76 @@
 				4E58EF622C3D9559008AB47D /* UserView.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		4E58EF722C3E6566008AB47D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF872C3E6B3E008AB47D /* Client */,
+				4E58EF732C3E6577008AB47D /* Service */,
+				4E58EF772C3E6686008AB47D /* Mocks */,
+				4E58EF762C3E667C008AB47D /* Dummies */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4E58EF732C3E6577008AB47D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF742C3E660F008AB47D /* NetworkServiceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4E58EF762C3E667C008AB47D /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF812C3E676D008AB47D /* Endpoints */,
+				4E58EF832C3E676D008AB47D /* Model */,
+			);
+			path = Dummies;
+			sourceTree = "<group>";
+		};
+		4E58EF772C3E6686008AB47D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF782C3E66E7008AB47D /* MockNetworkService.swift */,
+				4E58EF792C3E66E8008AB47D /* MockURLProtocol.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4E58EF7D2C3E6748008AB47D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF7C2C3E6748008AB47D /* XCTAssertThrowsErrorAsync.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4E58EF812C3E676D008AB47D /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF7F2C3E676D008AB47D /* DummyEndpoint.swift */,
+				4E58EF802C3E676D008AB47D /* DummyInvalidURLEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		4E58EF832C3E676D008AB47D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF822C3E676D008AB47D /* DummyTestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E58EF872C3E6B3E008AB47D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EF882C3E6B9C008AB47D /* GithubNetworkClientTests.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,7 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E58EF292C3D137B008AB47D /* GithubUsersTests.swift in Sources */,
+				4E58EF7E2C3E6748008AB47D /* XCTAssertThrowsErrorAsync.swift in Sources */,
+				4E58EF842C3E676D008AB47D /* DummyEndpoint.swift in Sources */,
+				4E58EF892C3E6B9C008AB47D /* GithubNetworkClientTests.swift in Sources */,
+				4E58EF7A2C3E66E8008AB47D /* MockNetworkService.swift in Sources */,
+				4E58EF752C3E660F008AB47D /* NetworkServiceTests.swift in Sources */,
+				4E58EF862C3E676D008AB47D /* DummyTestModel.swift in Sources */,
+				4E58EF852C3E676D008AB47D /* DummyInvalidURLEndpoint.swift in Sources */,
+				4E58EF7B2C3E66E8008AB47D /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
