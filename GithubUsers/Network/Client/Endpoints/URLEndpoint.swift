@@ -18,6 +18,12 @@ extension URLEndpoint {
     var request = URLRequest(url: url)
     request.httpMethod = method.string
 
+    if let headers = headers {
+      for header in headers {
+        request.addValue(header.value, forHTTPHeaderField: header.key)
+      }
+    }
+
     return request
   }
 }

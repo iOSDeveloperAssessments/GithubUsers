@@ -24,6 +24,8 @@ extension GithubEnpoint {
   var path: String { "" }
   var perPage: Int { 20 }
   var page: Int { .zero }
+  /// WARNING: Should not be here. Just for the assessment. Valid for 30 days.
+  var headers: [String : String]? { ["Authorization": "Bearer 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"] }
 }
 
 extension GithubEnpoint {
@@ -39,6 +41,12 @@ extension GithubEnpoint {
 
     var request = URLRequest(url: url)
     request.httpMethod = method.string
+
+    if let headers = headers {
+      for header in headers {
+        request.addValue(header.value, forHTTPHeaderField: header.key)
+      }
+    }
 
     return request
   }
