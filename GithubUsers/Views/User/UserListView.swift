@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct UserListView: View {
   @Environment(GithubNetworkClient.self) private var api
+  @Environment(\.modelContext) private var modelContext
 
-  @State private var users: [GithubUser] = []
+  @Query private var users: [GithubUser] = []
   @State private var viewState: ViewState = .loading
   @State private var currentPage = Int.zero
   @State private var since = Int.zero
@@ -67,6 +69,10 @@ struct UserListView: View {
     }
     .task {
       if users.isEmpty { await fetchNextUsers() }
+      else {
+        viewState = .users
+        since = users.last?.id ?? .zero
+      }
     }
   }
 }
@@ -75,7 +81,10 @@ extension UserListView {
   private func fetchNextUsers() async {
     do {
       let nextUsers = try await api.users(at: since)
-      users.append(contentsOf: nextUsers)
+      for user in nextUsers {
+        modelContext.insert(user)
+      }
+      try modelContext.save()
       currentPage += 1
       since = nextUsers.last?.id ?? .zero
       viewState = .users
@@ -89,5 +98,6 @@ extension UserListView {
   NavigationStack {
     UserListView()
       .environment(GithubNetworkClient(networkService: NetworkService()))
+      .modelContainer(for: GithubUser.self, inMemory: true)
   }
 }

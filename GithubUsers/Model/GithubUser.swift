@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import SwiftData
 
-struct GithubUser: Identifiable {
+@Model
+final class GithubUser: Identifiable {
   var id: Int
   var username: String
   var avatarURL: URL?
@@ -15,4 +17,13 @@ struct GithubUser: Identifiable {
   var name: String?
   var followers: [GithubUser]?
   var repositories: [Repository]?
+  
+  init(id: Int, username: String, avatarURL: URL? = nil, name: String? = nil, followers: [GithubUser]? = nil, repositories: [Repository]? = nil) {
+    self.id = id
+    self.username = username
+    self.avatarURL = avatarURL
+    self.name = name
+    self.followers = followers
+    self.repositories = repositories
+  }
 }
