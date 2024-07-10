@@ -28,6 +28,9 @@
 		4E58EF632C3D9559008AB47D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF622C3D9559008AB47D /* UserView.swift */; };
 		4E58EF652C3DA280008AB47D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF642C3DA280008AB47D /* Repository.swift */; };
 		4E58EF672C3DA488008AB47D /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF662C3DA488008AB47D /* UserEndpoint.swift */; };
+		4E58EF692C3DD6AF008AB47D /* RepositoriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF682C3DD6AF008AB47D /* RepositoriesEndpoint.swift */; };
+		4E58EF6B2C3DD780008AB47D /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF6A2C3DD780008AB47D /* RepositoryResponse.swift */; };
+		4E58EF6D2C3DD8C7008AB47D /* RepositoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF6C2C3DD8C7008AB47D /* RepositoryAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		4E58EF622C3D9559008AB47D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		4E58EF642C3DA280008AB47D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		4E58EF662C3DA488008AB47D /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		4E58EF682C3DD6AF008AB47D /* RepositoriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesEndpoint.swift; sourceTree = "<group>"; };
+		4E58EF6A2C3DD780008AB47D /* RepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
+		4E58EF6C2C3DD8C7008AB47D /* RepositoryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,7 @@
 				4E58EF4A2C3D1E25008AB47D /* GithubEnpoint.swift */,
 				4E58EF4C2C3D243E008AB47D /* UsersEndpoint.swift */,
 				4E58EF662C3DA488008AB47D /* UserEndpoint.swift */,
+				4E58EF682C3DD6AF008AB47D /* RepositoriesEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4E58EF542C3D315E008AB47D /* GithubUserResponse.swift */,
+				4E58EF6A2C3DD780008AB47D /* RepositoryResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4E58EF5A2C3D5A39008AB47D /* GithubUserAdapter.swift */,
+				4E58EF6C2C3DD8C7008AB47D /* RepositoryAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -375,14 +384,17 @@
 				4E58EF4F2C3D2D50008AB47D /* GithubNetworkClient.swift in Sources */,
 				4E58EF652C3DA280008AB47D /* Repository.swift in Sources */,
 				4E58EF482C3D1BEF008AB47D /* NetworkService.swift in Sources */,
+				4E58EF6B2C3DD780008AB47D /* RepositoryResponse.swift in Sources */,
 				4E58EF182C3D137A008AB47D /* ContentView.swift in Sources */,
 				4E58EF4B2C3D1E25008AB47D /* GithubEnpoint.swift in Sources */,
 				4E58EF5B2C3D5A39008AB47D /* GithubUserAdapter.swift in Sources */,
 				4E58EF522C3D2DA1008AB47D /* GithubUser.swift in Sources */,
 				4E58EF1A2C3D137A008AB47D /* Item.swift in Sources */,
+				4E58EF692C3DD6AF008AB47D /* RepositoriesEndpoint.swift in Sources */,
 				4E58EF552C3D315E008AB47D /* GithubUserResponse.swift in Sources */,
 				4E58EF452C3D1B0D008AB47D /* Endpoint.swift in Sources */,
 				4E58EF162C3D137A008AB47D /* GithubUsersApp.swift in Sources */,
+				4E58EF6D2C3DD8C7008AB47D /* RepositoryAdapter.swift in Sources */,
 				4E58EF4D2C3D243E008AB47D /* UsersEndpoint.swift in Sources */,
 				4E58EF672C3DA488008AB47D /* UserEndpoint.swift in Sources */,
 				4E58EF5F2C3D5F39008AB47D /* UserListView.swift in Sources */,

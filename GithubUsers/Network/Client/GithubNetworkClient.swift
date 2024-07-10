@@ -32,7 +32,11 @@ extension GithubNetworkClient: GithubAPI {
 
   func user(id: Int) async throws -> GithubUser {
     let response: GithubUserResponse = try await networkService.request(from: UserEndpoint(id: id))
+    let repositoryResponse: [RepositoryResponse] = try await networkService.request(from: RepositoriesEndpoint(urlString: response.repos_url ?? ""))
 
-    return GithubUserAdapter(response: response).adapt()
+    var user = GithubUserAdapter(response: response).adapt()
+    user.repositories = repositoryResponse.compactMap { RepositoryAdapter(response: $0).adapt() }
+
+    return user
   }
 }

@@ -57,6 +57,11 @@ struct UserView: View {
               }
             }
           }
+          Section("Repositories") {
+            ForEach(user.repositories ?? []) { repository in
+              Text(repository.name ?? "")
+            }
+          }
         }
       }
     }
