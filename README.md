@@ -8,6 +8,7 @@ Github API assesment.
 - [Requirements](#requirements)
 - [Bonus](#bonus)
 - [Annotations](#annotations)
+- [Screenshots](#screenshots)
 - [Contact](#contact)
 
 ## Instructions
@@ -29,11 +30,19 @@ Github API assesment.
 
 - ✅ Include a README.MD file with details about the solution documented (documents linked won't be considered)
 - ✅ The search input does the searching as you type (See google search as an example)
-- Persist the data locally
+- ✅ Persist the data locally
 - ✅ Add unit tests
 - ✅ Paginate the list of results
 
 ## Annotations
+
+- In user view just the first 30 repositories. No pagination applied. We already have the pagination example in the user list view.
+- In user view just the first 30 followers. No pagination applied. We already have the pagination example in the user list view.
+- The assessment with SwiftData in branch: [feature/swiftdata](https://github.com/iOSDeveloperAssessments/GithubUsers/tree/feature/swiftdata)
+
+## Screenshots
+
+![UserListView](Screenshots/UserListView.png "UserListView")
 
 ## Contact
 
