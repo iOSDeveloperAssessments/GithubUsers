@@ -14,4 +14,5 @@ struct GithubUserResponse: Decodable {
 
   var name: String?
   var repos_url: String?
+  var followers_url: String?
 }

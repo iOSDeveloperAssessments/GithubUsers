@@ -7,15 +7,6 @@
 
 import Foundation
 
-struct RepositoriesEndpoint: GithubEnpoint {
+struct RepositoriesEndpoint: URLEndpoint {
   var urlString: String
-
-  var urlRequest: URLRequest? {
-    guard let url = URL(string: urlString) else { return .none }
-
-    var request = URLRequest(url: url)
-    request.httpMethod = method.string
-
-    return request
-  }
 }

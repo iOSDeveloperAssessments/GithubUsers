@@ -62,6 +62,11 @@ struct UserView: View {
               Text(repository.name ?? "")
             }
           }
+          Section("Followers") {
+            ForEach(user.followers ?? []) { follower in
+              UserRowView(user: follower)
+            }
+          }
         }
       }
     }
