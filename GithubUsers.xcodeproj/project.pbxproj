@@ -46,6 +46,9 @@
 		4E58EF9E2C3EB79F008AB47D /* RepositoryAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF9D2C3EB79F008AB47D /* RepositoryAdapterTests.swift */; };
 		4E58EFA12C3EC008008AB47D /* RepositoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EFA02C3EC008008AB47D /* RepositoryRowView.swift */; };
 		4E58EFA32C3EC184008AB47D /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EFA22C3EC184008AB47D /* UserInfoView.swift */; };
+		4E58EFA72C3EED3B008AB47D /* UserListView.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E58EFA62C3EED3B008AB47D /* UserListView.png */; };
+		4E58EFA92C3EED62008AB47D /* UserView-Info-Repositories.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E58EFA82C3EED62008AB47D /* UserView-Info-Repositories.png */; };
+		4E58EFAD2C3EEDE6008AB47D /* UserView-Followers.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E58EFAC2C3EEDE6008AB47D /* UserView-Followers.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		4E58EFA02C3EC008008AB47D /* RepositoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowView.swift; sourceTree = "<group>"; };
 		4E58EFA22C3EC184008AB47D /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		4E58EFA42C3ECD08008AB47D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4E58EFA62C3EED3B008AB47D /* UserListView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserListView.png; sourceTree = "<group>"; };
+		4E58EFA82C3EED62008AB47D /* UserView-Info-Repositories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserView-Info-Repositories.png"; sourceTree = "<group>"; };
+		4E58EFAC2C3EEDE6008AB47D /* UserView-Followers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserView-Followers.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		4E58EF092C3D137A008AB47D = {
 			isa = PBXGroup;
 			children = (
+				4E58EFA52C3EED11008AB47D /* Screenshots */,
 				4E58EFA42C3ECD08008AB47D /* README.md */,
 				4E58EF142C3D137A008AB47D /* GithubUsers */,
 				4E58EF272C3D137B008AB47D /* GithubUsersTests */,
@@ -373,6 +380,16 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		4E58EFA52C3EED11008AB47D /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				4E58EFA62C3EED3B008AB47D /* UserListView.png */,
+				4E58EFA82C3EED62008AB47D /* UserView-Info-Repositories.png */,
+				4E58EFAC2C3EEDE6008AB47D /* UserView-Followers.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E58EF1F2C3D137B008AB47D /* Preview Assets.xcassets in Resources */,
+				4E58EFA72C3EED3B008AB47D /* UserListView.png in Resources */,
+				4E58EFAD2C3EEDE6008AB47D /* UserView-Followers.png in Resources */,
+				4E58EFA92C3EED62008AB47D /* UserView-Info-Repositories.png in Resources */,
 				4E58EF1C2C3D137B008AB47D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
