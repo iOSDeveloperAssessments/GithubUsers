@@ -42,7 +42,14 @@ Github API assesment.
 
 ## Screenshots
 
+### UserListView
 ![UserListView](Screenshots/UserListView.png "UserListView")
+
+### UserView-Info-Repositories
+![UserView-Info-Repositories](UserView-Info-Repositories.png "UserView-Info-Repositories")
+
+### UserView-Followers
+![UserView-Followers](UserView-Followers.png "UserView-Followers")
 
 ## Contact
 
