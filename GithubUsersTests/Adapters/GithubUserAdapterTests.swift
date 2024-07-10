@@ -18,10 +18,10 @@ final class GithubUserAdapterTests: XCTestCase {
       avatar_url: Constants.avatarURL,
       name: Constants.name
     )
-    let adapter = GithubUserAdapter(response: response)
+    let sut = GithubUserAdapter(response: response)
 
     /// When
-    let user = adapter.adapt()
+    let user = sut.adapt()
 
     /// Then
     XCTAssertEqual(user.id, Constants.id)
@@ -37,10 +37,10 @@ final class GithubUserAdapterTests: XCTestCase {
       login: Constants.username,
       avatar_url: Constants.avatarURL
     )
-    let adapter = GithubUserAdapter(response: response)
+    let sut = GithubUserAdapter(response: response)
 
     /// When
-    let user = adapter.adapt()
+    let user = sut.adapt()
 
     /// Then
     XCTAssertEqual(user.id, Constants.id)
@@ -57,12 +57,12 @@ final class GithubUserAdapterTests: XCTestCase {
       avatar_url: "",
       name: Constants.name
     )
-    let adapter = GithubUserAdapter(response: response)
+    let sut = GithubUserAdapter(response: response)
 
-    // When
-    let user = adapter.adapt()
+    /// When
+    let user = sut.adapt()
 
-    // Then
+    /// Then
     XCTAssertEqual(user.id, Constants.id)
     XCTAssertEqual(user.username, Constants.username)
     XCTAssertNil(user.avatarURL)

@@ -45,6 +45,7 @@
 		4E58EF952C3E8616008AB47D /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E58EF942C3E8616008AB47D /* Repositories.json */; };
 		4E58EF992C3E8FF4008AB47D /* DummyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF982C3E8FF4008AB47D /* DummyLoader.swift */; };
 		4E58EF9C2C3E948D008AB47D /* GithubUserAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF9B2C3E948D008AB47D /* GithubUserAdapterTests.swift */; };
+		4E58EF9E2C3EB79F008AB47D /* RepositoryAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E58EF9D2C3EB79F008AB47D /* RepositoryAdapterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		4E58EF942C3E8616008AB47D /* Repositories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Repositories.json; sourceTree = "<group>"; };
 		4E58EF982C3E8FF4008AB47D /* DummyLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLoader.swift; sourceTree = "<group>"; };
 		4E58EF9B2C3E948D008AB47D /* GithubUserAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserAdapterTests.swift; sourceTree = "<group>"; };
+		4E58EF9D2C3EB79F008AB47D /* RepositoryAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAdapterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,8 +269,8 @@
 		4E58EF5C2C3D5EFB008AB47D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E58EF5D2C3D5F0C008AB47D /* Users */,
 				4E58EF172C3D137A008AB47D /* ContentView.swift */,
+				4E58EF5D2C3D5F0C008AB47D /* Users */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				4E58EF9B2C3E948D008AB47D /* GithubUserAdapterTests.swift */,
+				4E58EF9D2C3EB79F008AB47D /* RepositoryAdapterTests.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				4E58EF892C3E6B9C008AB47D /* GithubNetworkClientTests.swift in Sources */,
 				4E58EF9C2C3E948D008AB47D /* GithubUserAdapterTests.swift in Sources */,
 				4E58EF7A2C3E66E8008AB47D /* MockNetworkService.swift in Sources */,
+				4E58EF9E2C3EB79F008AB47D /* RepositoryAdapterTests.swift in Sources */,
 				4E58EF752C3E660F008AB47D /* NetworkServiceTests.swift in Sources */,
 				4E58EF862C3E676D008AB47D /* DummyTestModel.swift in Sources */,
 				4E58EF852C3E676D008AB47D /* DummyInvalidURLEndpoint.swift in Sources */,
