@@ -46,10 +46,10 @@ Github API assesment.
 ![UserListView](Screenshots/UserListView.png "UserListView")
 
 ### UserView-Info-Repositories
-![UserView-Info-Repositories](UserView-Info-Repositories.png "UserView-Info-Repositories")
+![UserView-Info-Repositories](Screenshots/UserView-Info-Repositories.png "UserView-Info-Repositories")
 
 ### UserView-Followers
-![UserView-Followers](UserView-Followers.png "UserView-Followers")
+![UserView-Followers](Screenshots/UserView-Followers.png "UserView-Followers")
 
 ## Contact
 
