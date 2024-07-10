@@ -35,6 +35,7 @@ struct UserView: View {
             UserInfoView(user: user)
           }
           if let repositories = user.repositories {
+            // WARNING: Just the first 30. No pagination.
             Section("Repositories") {
               ForEach(repositories) { repository in
                 RepositoryRowView(repository: repository)
@@ -42,6 +43,7 @@ struct UserView: View {
             }
           }
           if let followers = user.followers {
+            // WARNING: Just the first 30. No pagination.
             Section("Followers") {
               ForEach(followers) { follower in
                 UserRowView(user: follower)
