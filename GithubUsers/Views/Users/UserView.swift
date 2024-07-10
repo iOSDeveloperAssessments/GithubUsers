@@ -57,9 +57,28 @@ struct UserView: View {
               }
             }
           }
-          Section("Repositories") {
-            ForEach(user.repositories ?? []) { repository in
-              Text(repository.name ?? "")
+          if let repositories = user.repositories {
+            Section("Repositories") {
+              ForEach(repositories) { repository in
+                HStack(spacing: 5) {
+                  if let name = repository.name {
+                    Text(name)
+                      .lineLimit(1)
+                  }
+                  Spacer()
+                  if let language = repository.language {
+                    Text(language)
+                      .font(.subheadline)
+                      .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                      .padding(5)
+                      .background(Color(red: 0.9, green: 0.9, blue: 0.9))
+                      .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                          .stroke(Color.black, lineWidth: 1)
+                      )
+                  }
+                }
+              }
             }
           }
           Section("Followers") {
